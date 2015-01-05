@@ -280,6 +280,11 @@
                                              destination:(NSURL * (^)(NSURL *targetPath, NSURLResponse *response))destination
                                        completionHandler:(void (^)(NSURLResponse *response, NSURL *filePath, NSError *error))completionHandler;
 
+- (void)initWithDownloadTask:(NSURLSessionDownloadTask *)downloadTask
+                    progress:(NSProgress * __autoreleasing *)progress
+                 destination:(NSURL * (^)(NSURL *targetPath, NSURLResponse *response))destination
+           completionHandler:(void (^)(NSURLResponse *response, NSURL *filePath, NSError *error))completionHandler;
+
 ///---------------------------------
 /// @name Getting Progress for Tasks
 ///---------------------------------
